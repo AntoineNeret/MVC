@@ -23,6 +23,12 @@ class Vue_CaseA_PageSuivante extends Vue_Composant
             <button type='submit' name='action' value='pageAccueil'>
                 Retour à l'accueil
             </button>
+                        <button type='submit' name='action' value='CalculIMC'>
+                Calculer votre IMC
+            </button>
+                        <button type='submit' name='action' value='CalculDistanceOrage'>
+                Calculer la distance d'un orage
+            </button>
     </form>
 </div>
  

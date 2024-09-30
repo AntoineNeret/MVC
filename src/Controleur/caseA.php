@@ -16,4 +16,18 @@ switch ($action) {
         $Vue->addToCorps(new \App\Vue\Vue_AccueilCaseA());
         $Vue->addToCorps(new \App\Vue\Vue_AfficherMessage("Vous venez de changer de case !"));
         break;
+    case "CalculIMC":
+        $Vue->addToCorps(new \App\Vue\Vue_CalculIMC());
+        if (!empty($_POST["poids"])) {
+            $IMC = $_POST["poids"] / ($_POST["taille"] * $_POST["taille"]);
+            $Vue->addToCorps(new \App\Vue\Vue_AfficherMessage("Votre IMC est de $IMC"));
+        }
+        break;
+    case "CalculDistanceOrage":
+        $Vue->addToCorps(new App\Vue\Vue_CalculDistanceOrage());
+        if (!empty($_POST["secondes"])) {
+            $distance = $_POST["secondes"] / 3;
+            $Vue->addToCorps(new \App\Vue\Vue_AfficherMessage("L'orage est à $distance km de distance"));
+        }
+        break;
 }

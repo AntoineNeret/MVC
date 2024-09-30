@@ -2,7 +2,7 @@
 namespace App\Vue;
 use App\Utilitaire\Vue_Composant;
 
-class Vue_Menu_B extends Vue_Composant
+class   Vue_Menu_B extends Vue_Composant
 {
     public function __construct( )
     {           }
